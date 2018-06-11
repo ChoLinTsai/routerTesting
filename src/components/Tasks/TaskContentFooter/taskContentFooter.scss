@@ -1,0 +1,36 @@
+.taskContentFooter {
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 4px 4px 0 #C8C8C8;
+  display: grid;
+  grid-template-columns:
+    1fr 1fr;
+  grid-template-rows:
+    1fr;
+  
+
+    .taskOptions {
+      width: 100%;
+      height: 100%;
+      @include flex;
+      p {
+        display: inline;
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+    
+
+
+    .taskCancel {
+      @include gridCR(1,2,1,2);
+      background: #ffffff;
+      color: #D0021B;
+    }
+
+    .taskAdd {
+      @include gridCR(2,3,1,2);
+      background: #4A90E2;
+      color: #ffffff;
+    }
+}

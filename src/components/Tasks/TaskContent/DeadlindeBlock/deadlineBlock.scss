@@ -1,0 +1,38 @@
+.deadlineBlock {
+  height: 100px;
+  .deadlineDateTime {
+    @include gridCR(1,2,2,3);
+    padding-left: 32px;
+    display: grid;
+    grid-template-columns:
+      [c1] 200px [c2] 200px [c3] 1fr
+      [c4];
+    
+    grid-template-rows:
+      [r1] 1fr [r2];
+
+    label {
+      left: 0;
+    }
+
+    .input-field {
+      display: inline-block;
+      width: 150px;
+
+      .inputDate, .inputTime {
+        margin: 0;
+      }
+
+    }
+
+    .inputDateBlock {
+      @include gridCR(1,2,1,2);
+    }
+
+    .inputTimeBlock {
+      @include gridCR(2,3,1,2);
+    }
+    
+  }
+              
+}

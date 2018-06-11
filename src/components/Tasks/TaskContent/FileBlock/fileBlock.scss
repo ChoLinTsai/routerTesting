@@ -1,0 +1,13 @@
+.fileBlock {
+  height: 100px;
+
+    .fileAdd {
+      @include gridCR(1,2,2,3);
+      @include flex(flex-start);
+      padding-left: 32px;
+      
+      .iconAdd {
+        font-size: 2.5rem;
+      }
+    }
+}

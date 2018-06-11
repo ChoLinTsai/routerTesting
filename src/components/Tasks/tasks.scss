@@ -1,0 +1,153 @@
+.sectionTasks {
+  width: 100vw;
+  height: 100vh;
+  
+  .container {
+    @include flex;
+    
+    .tasksBlock {
+      width: 620px;
+      height: 100%;
+      box-shadow: 0;
+      border-radius: 5px 5px 0 0;
+      border: 0;
+      background: #E1E1E1;
+
+      .collapsible {
+        margin: 0;
+        border: none;
+        box-shadow: none;
+
+        li {
+          .collapsible-header {
+            width: 100%;
+            height: 76px;
+            background: #F2F2F2;
+            border-bottom: 2px solid #C8C8C8;
+            display: grid;
+            grid-template-columns:
+              [c1] 3rem [c2] 1fr [c3] 5rem
+              [c4] 5rem [c5];
+            grid-template-rows: 1fr;
+
+            .checkboxWrapper {
+              grid-column: 1/2;
+              grid-row: 1/2;
+              @include flex;
+
+              .row {
+                margin: 0;
+                width: 24px;
+                height: 24px;
+  
+                .col {
+                  padding: 0;
+                  
+                  [type="checkbox"]:checked+label:before {
+                    width: 15px;
+                    height: 25px;
+                  }
+  
+                  label {
+                    width: 24px;
+                    height: 24px;
+                    padding-left: 0;
+                    height: 0;
+                    display: inline;
+  
+                    &::before {
+                      width: 24px;
+                      height: 24px;
+                      margin-top: 0px;
+                    }
+                    &::after {
+                      margin-top: 0px;
+                    }
+                  }
+                }
+              }
+            }
+
+            .taskTitleWrapper {
+              grid-column: 2/3;
+              grid-row: 1/2;
+              width: 100%;
+              height: 100%;
+              @include flex;
+
+              .row {
+                margin: 0;
+                width: 395px;
+                height: 74px;
+                
+                form {
+                  width: 100%;
+                  height: 100%;
+  
+                  .row {
+
+                    .input-field {
+                      margin-top: 1rem;
+                      input {
+                        margin: 0;
+                        font-size: 1.5rem;
+                      }
+                    }
+
+                    .input-field 
+                    label:not(.label-icon).active {
+                      font-size: 0.75rem;
+                      transform: translateY(-75%);
+                    }
+
+                    label {
+                      font-size: 1.25rem;
+                    }
+                  }
+                }
+              }
+            }
+
+            .taskIconWrapper {
+              grid-column: 3/5;
+              grid-row: 1/2;
+              display: grid;
+              grid-template-columns:
+                [c1] 1fr [c2] 1fr [c3];
+              grid-template-rows:
+                [r1] 1fr [r2];
+              justify-items: center;
+              align-items: center;
+              
+              i {
+                font-size: 2rem;
+                margin: 0;
+              }
+
+              .iconStar {
+                grid-column: 1/2;
+                grid-row: 1/2
+                
+              }
+
+              .iconEdit {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                color: #4A90E2;
+              }
+
+            }
+          }
+
+          .collapsible-body {
+              width: 620px;
+              height: 445px;
+              padding: 0;
+
+          }
+        }
+      }
+
+    }
+  }
+}

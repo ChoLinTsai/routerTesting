@@ -1,0 +1,52 @@
+$navHeight: 76px;
+
+.navBarBlock {
+  display: block;
+ 
+  nav {
+    background: #4A90E2;
+    height: $navHeight;
+    box-shadow: none;
+    @include flex;
+
+    .nav-wrapper {
+      width: 620px;
+
+      div {
+        ul {
+          @include flex(space-between);
+
+          li {
+            a {
+              @include flex;
+              height: $navHeight;
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 994px) {
+  .navBarBlock {
+    nav {
+      .nav-wrapper {
+        div {
+          ul {
+            @include flex(flex-start, flex-end);
+            flex-direction: column;
+            li {
+              a {
+                @include flex;
+                height: $navHeight;
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
