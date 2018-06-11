@@ -16,7 +16,7 @@ class Index extends Component {
 
   render() {
     return (
-      <Router className="index" basename={process.env.PUBLIC_URL}>
+      <Router className="index" basename="/routerTesting/">
         <div>
           <Header />
           <Switch>
