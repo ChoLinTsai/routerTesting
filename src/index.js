@@ -16,14 +16,14 @@ class Index extends Component {
 
   render() {
     return (
-      <Router className="index" basename="/routerTesting/">
+      <Router className="index">
         <div>
           <Header />
           <Switch>
-            <Route path="/" component={Tasks} exact />
-            <Route path="/inprogress"
+            <Route path="/routerTesting/" component={Tasks} exact />
+            <Route path="/routerTesting/inprogress"
               component={Inprogress} />
-            <Route path="/done" component={Done} />
+            <Route path="/routerTesting/done" component={Done} />
             <Route component={Error} />
           </Switch>
         </div>

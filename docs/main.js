@@ -9844,7 +9844,7 @@ var Navigation = function (_Component) {
               { className: 'navMyTasks' },
               _react2.default.createElement(
                 _reactRouterDom.Link,
-                { to: '/' },
+                { to: '/routerTesting/' },
                 'My Tasks'
               )
             ),
@@ -9853,7 +9853,7 @@ var Navigation = function (_Component) {
               { className: 'nav-inProgress' },
               _react2.default.createElement(
                 _reactRouterDom.Link,
-                { to: '/inprogress' },
+                { to: '/routerTesting/inprogress' },
                 'In Progress'
               )
             ),
@@ -9862,7 +9862,7 @@ var Navigation = function (_Component) {
               { className: 'nav-done' },
               _react2.default.createElement(
                 _reactRouterDom.Link,
-                { to: '/done' },
+                { to: '/routerTesting/done' },
                 'Done'
               )
             )
@@ -10628,7 +10628,7 @@ var Index = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _reactRouterDom.BrowserRouter,
-        { className: 'index', basename: '/routerTesting/' },
+        { className: 'index' },
         _react2.default.createElement(
           'div',
           null,
@@ -10636,10 +10636,10 @@ var Index = function (_Component) {
           _react2.default.createElement(
             _reactRouterDom.Switch,
             null,
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Tasks2.default, exact: true }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/inprogress',
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/routerTesting/', component: _Tasks2.default, exact: true }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/routerTesting/inprogress',
               component: _Inprogress2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/done', component: _Done2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/routerTesting/done', component: _Done2.default }),
             _react2.default.createElement(_reactRouterDom.Route, { component: _Error2.default })
           )
         )
